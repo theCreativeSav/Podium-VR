@@ -69,6 +69,7 @@ public class MainMenuManagerScript : MonoBehaviour
         scenarioMenu.SetActive(true);
     }
 
+
     public void ScenarioScrollerRight()
     {
 

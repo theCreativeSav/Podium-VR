@@ -14,7 +14,6 @@ public class TimerScript : MonoBehaviour
     public GameObject stopSessButton;
     public TMP_Dropdown timerDropDown;
 
-    // Update is called once per frame
 
     private void Start()
     {
@@ -22,7 +21,8 @@ public class TimerScript : MonoBehaviour
     }
     void Update()
     {
-
+        //Every frame, the script checks the value of the remaining time
+        //to determine whether to stop the timer or keep it going.
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;                  

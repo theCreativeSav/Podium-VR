@@ -17,11 +17,10 @@ public class SlidesScript : MonoBehaviour
     public List<Sprite> slidesSpriteList2 = new();
     public List<Sprite> slidesSpriteList3 = new();
     public List<List<Sprite>> AllSlidesList = new();
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
-        //Debug.Log("Pref deleted");
         AllSlidesList.Add(slidesSpriteList1);
         AllSlidesList.Add(slidesSpriteList2);
         AllSlidesList.Add(slidesSpriteList3);
@@ -30,11 +29,8 @@ public class SlidesScript : MonoBehaviour
 
         primarySlideImage.sprite = AllSlidesList[slideDropdown.value][0];
         secondarySlideImage.sprite = AllSlidesList[slideDropdown.value][0];
-
-
     }
 
-    // Update is called once perAllSlidesList[slideDropdown.value] frame
     void Update()
     {
         if (NextSlideButton.action.WasPressedThisFrame())
@@ -59,6 +55,7 @@ public class SlidesScript : MonoBehaviour
         }
     }
 
+    //PlayerPrefs updates the position of the current slide on the slide dropdown.
     public void UpdateSlidePosition()
     {
         PlayerPrefs.SetInt("SlidePosition", slideDropdown.value);
